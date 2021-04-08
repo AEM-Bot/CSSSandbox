@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables aka Custom Properties</title>
+    <style>
+        :root{
+            --primary-color:steelblue;
+            --secondary-color:skyblue;
+            --light-color:#f4f4f4;
+            --max-width:1100px;
+            --box-1-width:1;
+            --box-2-width:2;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            background: var(--light-color);
+        }
+        header{
+            background-color: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;
+            color: #ffffff;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            margin: auto;
+            max-width: var(--max-width);
+        }
+        .box{
+            background-color: var(--primary-color);
+            border-bottom: 5px var(--secondary-color) solid;
+            color: #ffffff;
+            padding: 1rem;
+            margin:1rem;
+        }
+        .box-1{
+            flex: var(--box-1-width);
+        }
+        .box-2{
+            flex:var(--box-2-width);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS Variables</h1>
+    </header>
+
+    <div class="container">
+        <div class="box box-1">
+            <h3>Heading </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sit error minima quasi mollitia ipsum,
+                quisquam similique harum culpa nam velit reiciendis nesciunt laudantium fugiat blanditiis temporibus ea
+                doloremque dolor?</p>
+        </div>
+        <div class="box box-2">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique amet obcaecati eum explicabo impedit
+                dicta provident quo! Voluptas unde, cum nobis rem, eius eaque natus mollitia consequuntur beatae
+                officiis exercitationem!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
